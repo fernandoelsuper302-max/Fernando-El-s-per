@@ -1,0 +1,44 @@
+{
+  "name": "J.A.R.V.I.S. Stark OS",
+  "short_name": "J.A.R.V.I.S.",
+  "description": "Sistema Operativo e Inteligencia Artificial Táctica de Stark Industries con Visión Computacional, Interfaz Holográfica, Reconocimiento de Voz y Control del Hogar.",
+  "start_url": "/?mode=standalone",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "categories": ["utilities", "productivity", "entertainment"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512 any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Visor Óptico",
+      "short_name": "Visor",
+      "description": "Abrir cámara y escáner táctico",
+      "url": "/?tab=visor",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Matriz de Ideas y Chat",
+      "short_name": "Chat",
+      "description": "Conversar con la IA de Stark",
+      "url": "/?tab=chat",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Control del Hogar",
+      "short_name": "Domótica",
+      "description": "Controlar luces, TV y dispositivos",
+      "url": "/?tab=home",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-hud-cyan: #00f0ff;
+  --color-hud-orange: #ffaa00;
+  --color-hud-red: #ff3b3b;
+  --color-hud-bg: #070c14;
+  --color-hud-panel: rgb(13 22 38 / 0.7);
+  --color-hud-border: rgb(0 240 255 / 0.25);
+  
+  --animate-radar-sweep: radar-sweep 2.5s linear infinite;
+  --animate-scan-laser: scan-laser 2s ease-in-out infinite;
+  --animate-reactor-pulse: reactor-pulse 3s ease-in-out infinite;
+  --animate-spin-slow: spin 16s linear infinite;
+  --animate-spin-reverse: spin-reverse 10s linear infinite;
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes scan-laser {
+  0%, 100% { top: 0%; opacity: 0.3; }
+  50% { top: 100%; opacity: 1; }
+}
+
+@keyframes reactor-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.4)); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.8)); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Custom styles for high-tech HUD styling */
+.hud-glow {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+.hud-glow-strong {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+}
+
+.hud-panel {
+  background: radial-gradient(100% 100% at 50% 0%, rgb(16 28 50 / 0.8) 0%, rgb(8 14 26 / 0.95) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.hud-grid {
+  background-image: linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Scrollbar customizations */
+.hud-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.hud-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 240, 255, 0.02);
+}
+
+.hud-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 2px;
+}
+
+.hud-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}

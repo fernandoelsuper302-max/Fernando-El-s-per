@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="arcGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#00f0ff" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Shield -->
+  <rect width="512" height="512" rx="100" fill="#030712"/>
+  <rect width="500" height="500" x="6" y="6" rx="94" fill="none" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.3"/>
+
+  <!-- Radial Core Glow -->
+  <circle cx="256" cy="256" r="210" fill="url(#arcGlow)"/>
+
+  <!-- Outer Tech Ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#00f0ff" stroke-width="4" stroke-opacity="0.7" filter="url(#neon)"/>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="14, 8" stroke-opacity="0.8"/>
+  <circle cx="256" cy="256" r="140" fill="none" stroke="#0284c7" stroke-width="3" stroke-opacity="0.5"/>
+
+  <!-- Arc Reactor 10 Coils -->
+  <g transform="translate(256, 256)" stroke="#00f0ff" stroke-width="5" stroke-linecap="round" filter="url(#neon)">
+    <g transform="rotate(0)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(36)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(72)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(108)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(144)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(180)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(216)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(252)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(288)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+    <g transform="rotate(324)"><line x1="0" y1="-140" x2="0" y2="-100"/><rect x="-10" y="-135" width="20" height="25" rx="3" fill="#082f49" stroke="#00f0ff" stroke-width="2"/></g>
+  </g>
+
+  <!-- Inner Core Reactor -->
+  <circle cx="256" cy="256" r="75" fill="#082f49" stroke="url(#ringGrad)" stroke-width="6" filter="url(#neon)"/>
+  <polygon points="256,195 308,285 204,285" fill="none" stroke="#00f0ff" stroke-width="4" stroke-linejoin="round" filter="url(#neon)"/>
+  <circle cx="256" cy="256" r="32" fill="#ffffff" filter="url(#neon)"/>
+  <circle cx="256" cy="256" r="16" fill="#00f0ff"/>
+
+  <!-- Tech Corner Markers -->
+  <path d="M 40 80 L 40 40 L 80 40" fill="none" stroke="#00f0ff" stroke-width="3"/>
+  <path d="M 472 80 L 472 40 L 432 40" fill="none" stroke="#00f0ff" stroke-width="3"/>
+  <path d="M 40 432 L 40 472 L 80 472" fill="none" stroke="#00f0ff" stroke-width="3"/>
+  <path d="M 472 432 L 472 472 L 432 472" fill="none" stroke="#00f0ff" stroke-width="3"/>
+</svg>

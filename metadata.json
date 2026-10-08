@@ -1,0 +1,6 @@
+{
+  "name": "JARVIS Vision Assistant",
+  "description": "An intelligent AI assistant inspired by JARVIS with computer and OS control, camera-based scanning, Gemini vision analysis, speech synthesis, and smart home automation.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
